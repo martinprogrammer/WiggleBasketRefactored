@@ -128,6 +128,8 @@
     </Compile>
     <Compile Include="HelperExtensions\SelectListExtension.cs" />
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\Products\WebDbContext.cs" />
+    <Compile Include="Models\Products\ProductMapping.cs" />
     <Compile Include="Repositories\ICartRepository.cs" />
     <Compile Include="Repositories\IInventoryRepository.cs" />
     <Compile Include="Repositories\IShoppingRepository.cs" />
