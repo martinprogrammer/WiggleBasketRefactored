@@ -34,7 +34,7 @@ namespace WiggleBasketRefactored
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
-
+            UnityConfig.RegisterComponents();
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
 
