@@ -1,0 +1,52 @@
+﻿@model WiggleBasketRefactored.Models.Products.ProductSpecific
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>ProductSpecific</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ProductID)
+        </div>
+        <div class="editor-field">
+            
+           
+            @Html.TextBox("ProductID", ViewData["id"]) 
+           
+            
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.RuleName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.RuleName)
+            @Html.ValidationMessageFor(model => model.RuleName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.RuleValue)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.RuleValue)
+            @Html.ValidationMessageFor(model => model.RuleValue)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

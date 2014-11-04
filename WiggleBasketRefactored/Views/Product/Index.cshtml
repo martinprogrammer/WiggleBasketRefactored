@@ -1,0 +1,48 @@
+﻿@model IEnumerable<WiggleBasketRefactored.Models.Products.Product>
+@using WiggleBasketRefactored.HelperExtensions
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Products Admin Page</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            Product Name
+        </th>
+        <th>
+            Image Name
+        </th>
+        <th>
+            Price
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.Image(item.ImageName.ToString())
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+            @if (item.Type != WiggleBasketRefactored.Models.Products.ProductTypeEnum.Items.ToString())
+            {
+                @Html.ActionLink("AddRules", "Create", "Rules", new { id = item.ID }, null)
+            }
+        </td>
+    </tr>
+}
+
+</table>

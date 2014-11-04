@@ -1,0 +1,43 @@
+﻿@model WiggleBasketRefactored.Models.Shopping.Cart
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Cart</legend>
+
+    <div class="display-label">Products</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Products.Name)
+    </div>
+
+    <div class="display-label">Count</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Count)
+    </div>
+
+    <div class="display-label">Price</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Price)
+    </div>
+
+    <div class="display-label">OldTotal</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.OldTotal)
+    </div>
+
+    <div class="display-label">DateCreated</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DateCreated)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

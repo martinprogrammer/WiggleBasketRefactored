@@ -1,0 +1,30 @@
+﻿@model WiggleBasketRefactored.Models.Products.ProductSpecific
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>ProductSpecific</legend>
+
+    <div class="display-label">ProductID</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ProductID)
+    </div>
+
+    <div class="display-label">RuleName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RuleName)
+    </div>
+
+    <div class="display-label">RuleValue</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RuleValue)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

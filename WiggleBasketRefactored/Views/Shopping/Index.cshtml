@@ -1,0 +1,63 @@
+﻿@model IEnumerable<WiggleBasketRefactored.Models.Products.Product>
+@using WiggleBasketRefactored.HelperExtensions  
+@using WiggleBasketRefactored.Models.Products
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Shopping Page</h2>
+
+
+@section Offers{
+<table>
+<tr>
+<td colspan="3">Available Offers</td>
+</tr>
+
+@if (ViewData["Offers"] != null)
+{
+
+<tr>
+
+@foreach (var offer in (ViewData["Offers"] as IQueryable<Product>))
+{
+
+    <td>
+       @Html.Image("vouchercode.jpg") <br />
+       Please type in: <b>@Html.DisplayFor(modelOffer => offer.Name)</b><br />
+       Only valid for products in <b>@Html.DisplayFor(modelOffer => offer.Category)</b> category<br />
+       <b>£@Html.DisplayFor(modelOffer => offer.Price)</b> off basket total<br />
+       When you spend <b>£@Html.DisplayFor(modelOffer => offer.OfferThreshold)</b> or more!
+    </td>
+
+}
+</tr>
+    
+}
+</table>
+
+}
+
+
+<table>
+   
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.Image(item.ImageName.ToString())
+        </td>
+        <td>
+            £@Html.DisplayFor(modelItem => item.Price)
+        </td>
+       <td>
+            @Html.ActionLink("Add to cart", "AddToCart", "Shopping", new { id = item.ID },null) 
+            
+        </td>
+    </tr>
+}
+
+</table>

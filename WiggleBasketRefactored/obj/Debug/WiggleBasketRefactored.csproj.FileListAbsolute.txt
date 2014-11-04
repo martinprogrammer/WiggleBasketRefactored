@@ -1,0 +1,14 @@
+c:\users\user\documents\visual studio 2010\Projects\WiggleBasketRefactored\WiggleBasketRefactored\bin\WiggleBasketRefactored.dll
+c:\users\user\documents\visual studio 2010\Projects\WiggleBasketRefactored\WiggleBasketRefactored\bin\WiggleBasketRefactored.pdb
+c:\users\user\documents\visual studio 2010\Projects\WiggleBasketRefactored\WiggleBasketRefactored\bin\EntityFramework.dll
+c:\users\user\documents\visual studio 2010\Projects\WiggleBasketRefactored\WiggleBasketRefactored\bin\EntityFramework.xml
+c:\users\user\documents\visual studio 2010\Projects\WiggleBasketRefactored\WiggleBasketRefactored\obj\Debug\ResolveAssemblyReference.cache
+c:\users\user\documents\visual studio 2010\Projects\WiggleBasketRefactored\WiggleBasketRefactored\obj\Debug\WiggleBasketRefactored.dll
+c:\users\user\documents\visual studio 2010\Projects\WiggleBasketRefactored\WiggleBasketRefactored\obj\Debug\WiggleBasketRefactored.pdb
+C:\Users\mwollny\Documents\Visual Studio 2013\Projects\WiggleBasketRefactored\WiggleBasketRefactored\bin\WiggleBasketRefactored.dll.config
+C:\Users\mwollny\Documents\Visual Studio 2013\Projects\WiggleBasketRefactored\WiggleBasketRefactored\bin\WiggleBasketRefactored.dll
+C:\Users\mwollny\Documents\Visual Studio 2013\Projects\WiggleBasketRefactored\WiggleBasketRefactored\bin\WiggleBasketRefactored.pdb
+C:\Users\mwollny\Documents\Visual Studio 2013\Projects\WiggleBasketRefactored\WiggleBasketRefactored\bin\EntityFramework.dll
+C:\Users\mwollny\Documents\Visual Studio 2013\Projects\WiggleBasketRefactored\WiggleBasketRefactored\bin\EntityFramework.xml
+C:\Users\mwollny\Documents\Visual Studio 2013\Projects\WiggleBasketRefactored\WiggleBasketRefactored\obj\Debug\WiggleBasketRefactored.dll
+C:\Users\mwollny\Documents\Visual Studio 2013\Projects\WiggleBasketRefactored\WiggleBasketRefactored\obj\Debug\WiggleBasketRefactored.pdb
