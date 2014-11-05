@@ -5,6 +5,7 @@ using System.Text;
 using System.Data;
 using WiggleBasketRefactored.Models.Products;
 using WiggleBasketRefactored.Models;
+using System.Data.Entity;
 
 namespace WiggleBasketRefactored.Repositories
 {

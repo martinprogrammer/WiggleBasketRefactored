@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
 using WiggleBasketRefactored.Models.Products;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WiggleBasketRefactored.Models.Shopping
 {

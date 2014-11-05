@@ -25,6 +25,11 @@ namespace WiggleBasketRefactored.Models.Products
             modelBuilder.Configurations.Add(new ProductMapping());
             base.OnModelCreating(modelBuilder);
         }
+
+        public new void Dispose()
+        {
+            throw new NotImplementedException();
+        }
     }
     
 }
