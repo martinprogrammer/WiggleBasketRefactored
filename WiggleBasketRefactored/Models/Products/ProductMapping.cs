@@ -11,7 +11,7 @@ namespace WiggleBasketRefactored.Models.Products
         public ProductMapping()
         {
             this.HasKey(x => x.ID);
-            this.ToTable("Products");
+            this.ToTable("Products1");
         }
     }
 }

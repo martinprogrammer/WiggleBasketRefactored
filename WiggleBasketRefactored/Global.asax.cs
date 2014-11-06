@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using System.Data.Entity;
 using WiggleBasketRefactored.Models;
+using WiggleBasketRefactored.Models.Products;
 
 namespace WiggleBasketRefactored
 {
@@ -34,7 +35,8 @@ namespace WiggleBasketRefactored
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
-            UnityConfig.RegisterComponents();
+            UnityMvc5.Start();
+            //UnityConfig.RegisterComponents();
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
 

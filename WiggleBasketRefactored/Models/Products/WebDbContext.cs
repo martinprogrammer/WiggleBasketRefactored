@@ -28,7 +28,7 @@ namespace WiggleBasketRefactored.Models.Products
 
         public new void Dispose()
         {
-            throw new NotImplementedException();
+            
         }
     }
     

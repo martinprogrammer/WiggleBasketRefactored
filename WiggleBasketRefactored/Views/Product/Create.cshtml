@@ -1,6 +1,4 @@
-﻿@Model WiggleBasketRefactored.Models.Products.Product
-
-@using WiggleBasketRefactored.Models.Products           
+﻿@model WiggleBasketRefactored.Models.Products.Product
 
 @{
     ViewBag.Title = "Create";
@@ -8,69 +6,75 @@
 
 <h2>Create</h2>
 
-<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
-<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
-@Html.ValidationSummary("The following errors occured:")
 
-@using (Html.BeginForm()) {
-    @Html.ValidationSummary(true)
-    <fieldset>
-        <legend>Product</legend>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Name)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Name)
-            @Html.ValidationMessageFor(model => model.Name)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.ImageName)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.ImageName)
-            @Html.ValidationMessageFor(model => model.ImageName)
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Product</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
         </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Price)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Price)
-            @Html.ValidationMessageFor(model => model.Price)
-        </div>
-
-         <div class="editor-label">
-            @Html.LabelFor(model => model.OfferThreshold)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.OfferThreshold)
-            @Html.ValidationMessageFor(model => model.OfferThreshold)
+        <div class="form-group">
+            @Html.LabelFor(model => model.Category, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Category, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Category, "", new { @class = "text-danger" })
+            </div>
         </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Category)
-        </div>
-        <div class="editor-field">
-            @Html.DropDownListFor(model => model.Category, new SelectList(Enum.GetValues(typeof(ProductCategoryEnum))))
-            @* @Html.DropDownList("Categories", "All") *@
-        </div>
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Type)
-            
-        </div>
-        <div class="editor-field">
-            @* @Html.DropDownList("Types", "All") *@
-            @Html.DropDownListFor(model => model.Type, new SelectList(Enum.GetValues(typeof(ProductTypeEnum))))
+        <div class="form-group">
+            @Html.LabelFor(model => model.ImageName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ImageName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ImageName, "", new { @class = "text-danger" })
+            </div>
         </div>
 
-        <p>
-            <input type="submit" value="Create" />
-        </p>
-    </fieldset>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Price, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Type, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Type, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Type, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.OfferThreshold, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.OfferThreshold, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.OfferThreshold, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
 }
 
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

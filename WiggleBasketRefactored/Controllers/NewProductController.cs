@@ -11,6 +11,7 @@ namespace WiggleBasketRefactored.Controllers
     {
         private readonly IProductRepository _productRepository;
 
+    
         public NewProductController(IUnitOfWorkManager unitOfWorkManager, IProductRepository productRepository) : base(unitOfWorkManager)
         {
             this._productRepository = productRepository;
